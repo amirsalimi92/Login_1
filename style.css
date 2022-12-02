@@ -1,0 +1,151 @@
+* {
+  font-family: Helvetica;
+}
+
+.image {
+  background-image: url("background.jpg");
+  filter: blur(10px);
+  /* -webkit-filter: blur(8px); */
+
+  height: 98vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.popup {
+  z-index: 1;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  background-color: rgba(51, 48, 48, 0.35);
+  width: 720px;
+  border-radius: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  grid-template-rows: 1fr 2fr 1fr 1fr;
+  grid-template-areas:
+    "frame title"
+    "frame insert"
+    "frame button"
+    "frame footer";
+}
+
+.frame {
+  grid-area: frame;
+  justify-content: center;
+}
+
+.frame > img {
+  border-radius: 1em;
+  width: 90%;
+  height: 90%;
+  margin: 5%;
+}
+
+.title {
+  grid-area: title;
+  font-size: 2.5em;
+  font-weight: bolder;
+  color: white;
+  margin-left: 10%;
+  margin-top: auto;
+}
+
+.insert {
+  grid-area: insert;
+  margin-left: 10%;
+  margin-top: auto;
+}
+
+label {
+  color: azure;
+  font-weight: bolder;
+}
+
+#username {
+  display: block;
+  width: 80%;
+  border-radius: 1em;
+  height: 1.5em;
+  opacity: 0.75;
+  background-color: silver;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 3%;
+}
+
+#username::placeholder {
+  font-style: italic;
+  text-align: center;
+}
+
+#username:focus {
+  opacity: 1;
+  background-color: azure;
+}
+
+#password {
+  display: block;
+  width: 80%;
+  border-radius: 1em;
+  height: 1.5em;
+  opacity: 0.75;
+  background-color: silver;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 3%;
+}
+
+#password::placeholder {
+  font-style: italic;
+  text-align: center;
+}
+
+#password:focus {
+  opacity: 1;
+  background-color: azure;
+}
+
+.button {
+  grid-area: button;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-right: 17.5%;
+}
+
+.button > button {
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-radius: 1.5em;
+  border: none;
+  background-image: linear-gradient(to right, #fb7ba2, #fce043);
+  color: azure;
+  font-weight: bolder;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.footer > div {
+  width: 75%;
+  margin-left: 10%;
+  border-top: 1px black solid;
+  color: azure;
+  text-align: center;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: yellow;
+}
+
+a:hover {
+  color: rgb(245, 245, 140);
+}
