@@ -1,5 +1,6 @@
 let form = document.querySelector(".form");
 let passInput = document.querySelector("#password");
+const passView = document.querySelector("#eye");
 
 let numberSecCheck = 0;
 
@@ -20,4 +21,12 @@ form.password.addEventListener("keyup", (e) => {
       passInput.style["background-color"] = "#fdb7b7";
     }
   }
+});
+
+passView.addEventListener("mousedown", () => {
+  passInput.type = "text";
+});
+
+passView.addEventListener("mouseup", () => {
+  passInput.type = "password";
 });

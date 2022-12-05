@@ -15,7 +15,7 @@ function sizing() {
   popup.style["top"] = strHeiGap + "px";
 
   if (widScreen > 1300) {
-    popup.style["left"] = "30%";
+    popup.style["left"] = "25%";
     popup.style["top"] = "30%";
   }
 }
