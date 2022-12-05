@@ -30,3 +30,11 @@ passView.addEventListener("mousedown", () => {
 passView.addEventListener("mouseup", () => {
   passInput.type = "password";
 });
+
+passView.addEventListener("touchstart", () => {
+  passInput.type = "text";
+});
+
+passView.addEventListener("touchcancel", () => {
+  passInput.type = "password";
+});
